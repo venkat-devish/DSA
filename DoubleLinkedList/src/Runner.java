@@ -18,6 +18,7 @@ public class Runner {
 			System.out.println("6.Delete First node");
 			System.out.println("7.Delete Last node");
 			System.out.println("8.Delete node");
+			System.out.println("9.Reverse");
 			System.out.println("Enter your choice: ");
 			System.out.println();
 			choice = scan.nextInt();
@@ -53,8 +54,8 @@ public class Runner {
 				System.out.println("Enter the position: ");
 				int pos = scan.nextInt();
 				List.deleteNode(pos);
-			} else if (choice == 19) {
-				break;
+			} else if (choice == 9) {
+				List.reverseList();
 			} else if (choice == 19) {
 				break;
 			} else {

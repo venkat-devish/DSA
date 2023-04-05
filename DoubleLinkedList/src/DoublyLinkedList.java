@@ -108,9 +108,24 @@ public class DoublyLinkedList {
 			i += 1;
 			p = p.next;
 		}
-//		if (p.next != null)
+		if (p.next != null)
 			p.next.prev = p.prev;
 		p.prev.next = p.next;
+	}
+
+	public void reverseList() {
+		Node p1, p2;
+		p1 = start;
+		p2 = p1.next;
+		p1.next = null;
+		p1.prev = p2;
+		while (p2 != null) {
+			p2.prev = p2.next;
+			p2.next = p1;
+			p1 = p2;
+			p2 = p2.prev;
+		}
+		start = p1;
 	}
 
 	public void createList() {
